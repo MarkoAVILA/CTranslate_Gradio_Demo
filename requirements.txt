@@ -1,0 +1,8 @@
+accelerate 
+ctranslate2 
+sentencepiece 
+transformers 
+einops 
+gradio
+transformers
+#!ct2-transformers-converter --model facebook/nllb-200-distilled-600M --output_dir nllb-200-distilled-600M-ct2
