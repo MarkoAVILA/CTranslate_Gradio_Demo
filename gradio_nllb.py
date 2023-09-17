@@ -14,10 +14,10 @@ def languages_to_code(langues):
 
 
 class Gradio_Translate:
-    def __init__(self, model_ct2="nllb-200-distilled-600M-ct2", model_base="facebook/nllb-200-distilled-600M", lang="Sapnish-French"):
+    def __init__(self, model_ct2="nllb-200-distilled-600M-ct2", model_base="facebook/nllb-200-distilled-600M", lang="Spanish-French"):
         self.model_ct2 = model_ct2
         self.model_base = model_base
-        self.src_lang, self.tgt_lang = lang.split('-')
+        self.src_lang, self.tgt_lang = languages_to_code(lang)
         self.translator = ctranslate2.Translator(model_ct2)
         self.tokenizer = transformers.AutoTokenizer.from_pretrained(model_base, src_lang=self.src_lang)
         
